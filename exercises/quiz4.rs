@@ -11,6 +11,12 @@
 mod tests {
     use super::*;
 
+    macro_rules! my_macro {
+        ($word:expr) => {
+            format!("Hello {}", $word)
+        };
+    }
+
     #[test]
     fn test_my_macro_world() {
         assert_eq!(my_macro!("world!"), "Hello world!");
